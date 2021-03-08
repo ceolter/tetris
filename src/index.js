@@ -57,7 +57,7 @@ function Game() {
     return (
         <div className="t-parent">
             <BoardMemo addRowData={addRowData}/>
-            <AgDashboard rowData={rowData}/>
+            {/*<AgDashboard rowData={rowData}/>*/}
             {/*<RtDashboard rowData={rowData}/>*/}
             {/*<RtOlympicWinners/>*/}
             {/*<ContextFun/>*/}
