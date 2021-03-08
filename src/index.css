@@ -1,0 +1,84 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 0px;
+}
+
+.t-row {
+    display: block;
+    margin-bottom: -3px;
+}
+
+.t-board {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid grey;
+}
+
+.t-cell {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    color: grey;
+}
+
+.t-cell-0 {
+    background-color: black;
+}
+
+.t-cell-1 {
+    background-color: #00d;
+    border-bottom: 1px solid #00f;
+    border-right: 1px solid #00f;
+    border-top: 1px solid #00b;
+    border-left: 1px solid #00b;
+}
+
+.t-cell-2 {
+    background-color: green;
+}
+
+.t-cell-3 {
+    background-color: red;
+}
+
+.t-score-label {
+    font-weight: bold;
+}
+
+.t-score-label {
+    font-weight: bold;
+}
+
+.t-parent {
+    display: flex;
+}
+
+.t-dashboard {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid grey;
+}
+
+.t-ag-grid {
+    height: 100%;
+    width: 500px;
+}
+
+.t-react-grid {
+    height: 100%;
+    width: 500px;
+    display: inline-block;
+    overflow-y: scroll;
+}
+
+.t-react-grid-body {
+    height: 200px;
+    overflow-x: scroll;
+}
+
+element.style {
+    width: 44px;
+    left: 0px;
+}
