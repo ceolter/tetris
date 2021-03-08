@@ -1,10 +1,11 @@
 import React, {useCallback, useRef, useMemo, useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {BoardMemo} from "./board";
-import {AgDashboard} from "./agDashboard";
-import {RtDashboard} from "./rtDashboard";
-import {RtOlympicWinners} from "./rtOlympicWinners";
+import {BoardMemo} from "./tetris/board";
+import {AgDashboard} from "./agGrid/agDashboard";
+import {RtDashboard} from "./reactTable/rtDashboard";
+import {RtOlympicWinners} from "./reactTable/rtOlympicWinners";
+import {FunImperativeHandle} from "./funImperativeHandle";
 
 function Game() {
 
@@ -61,6 +62,7 @@ function Game() {
             {/*<RtDashboard rowData={rowData}/>*/}
             {/*<RtOlympicWinners/>*/}
             {/*<ContextFun/>*/}
+            {/*<FunImperativeHandle/>*/}
         </div>
     );
 }

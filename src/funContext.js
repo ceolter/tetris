@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react';
 
 export const GlobalContext = React.createContext('light');
 
-export function ContextFun() {
+export function FunContext() {
 
     const [color, setColor] = useState(1)
 

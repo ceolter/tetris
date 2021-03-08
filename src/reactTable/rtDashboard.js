@@ -1,6 +1,6 @@
 import React, {useMemo} from 'react';
 import {useTable, useBlockLayout, useResizeColumns} from 'react-table';
-import {ROW_COUNT} from "./useBoard";
+import {ROW_COUNT} from "../tetris/useBoard";
 
 export function RtDashboard(props) {
 
