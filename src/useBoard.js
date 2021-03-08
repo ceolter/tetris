@@ -1,4 +1,5 @@
-import React, { memo, useState, useEffect, useRef } from 'react';
+import React, {useEffect, useState} from 'react';
+import {useInterval} from "./useInterval";
 
 export const ROW_COUNT = 20;
 export const COLUMN_COUNT = 10;
@@ -39,20 +40,6 @@ const SHAPES = [
 
 function randomShape() {
     return SHAPES[Math.floor(Math.random() * SHAPES.length)];
-}
-
-function useInterval(callback, delay) {
-
-    const callbackRef = useRef();
-    useEffect( ()=> {
-        callbackRef.current = callback;
-    }, [callback]);
-
-    useEffect( ()=> {
-        const interval = setInterval(()=> callbackRef.current(), delay);
-        return ()=> clearInterval(interval);
-    }, [delay]);
-
 }
 
 function copyScene(scene) {

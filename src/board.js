@@ -1,5 +1,5 @@
 import React, { memo, useEffect, useRef } from 'react';
-import {useBoard} from "./boardEffect";
+import {useBoard} from "./useBoard";
 
 export function Board (props) {
 

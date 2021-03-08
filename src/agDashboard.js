@@ -2,7 +2,7 @@ import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 import React, {useRef, useEffect, useMemo, useCallback, useState} from 'react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
-import {ROW_COUNT} from "./boardEffect";
+import {ROW_COUNT} from "./useBoard";
 
 export function AgDashboard(props) {
 

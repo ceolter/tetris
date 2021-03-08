@@ -1,6 +1,6 @@
 import React, {useMemo} from 'react';
 import {useTable, useBlockLayout, useResizeColumns} from 'react-table';
-import {ROW_COUNT} from "./boardEffect";
+import {ROW_COUNT} from "./useBoard";
 
 export function RtDashboard(props) {
 
