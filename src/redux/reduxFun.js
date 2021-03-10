@@ -84,7 +84,10 @@ function ReduxFunChild() {
     const completeFormatter = useCallback( params => '' + params.value );
 
     const columnDefs = useMemo( () => [
-        {field: 'complete', width: 100, valueFormatter: completeFormatter,
+        {
+            field: 'complete',
+            width: 100,
+            valueFormatter: completeFormatter,
             cellRendererFramework: function CompleteCellRenderer(props) {
                 const onClick = useCallback(
                     onCompleteClicked.bind(this, props.data.id, !props.data.complete)
@@ -94,7 +97,12 @@ function ReduxFunChild() {
                 );
             }
         },
-        {field: 'description', width: 200, editable: true, valueSetter: descriptionValueSetter},
+        {
+            field: 'description',
+            width: 200,
+            editable: true,
+            valueSetter: descriptionValueSetter
+        },
     ]);
 
     return (
