@@ -12,7 +12,14 @@
     "web-vitals": "^1.1.0",
     "ag-grid-community": "25.1.0",
     "ag-grid-react": "25.1.0",
-    "react-table": "7.6.3"
+    "react-table": "7.6.3",
+    "@devexpress/dx-react-core": "2.7.5",
+    "@devexpress/dx-react-grid": "2.7.5",
+    "@devexpress/dx-react-grid-material-ui": "2.7.5",
+    "@material-ui/core": "4.11.3",
+    "@material-ui/icons": "latest",
+    "react-redux": "7.2.2",
+    "redux": "latest"
   },
   "scripts": {
     "start": "react-scripts start",

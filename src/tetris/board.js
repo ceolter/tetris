@@ -23,20 +23,20 @@ export function Board (props) {
                 <span className="t-score-label">Score:</span>
                 <span className="t-score-label">{score.toLocaleString()}</span>
             </div>
-            {display.map( (row, index) => <RowMemo row={row} key={index}/>)}
+            {display.map( (row, index) => <Row row={row} key={index}/>)}
         </div>
     );
 }
 
-function Row(props) {
+const Row = memo( props => {
     return (
         <span className='t-row'>
-            {props.row.map( (cell, index) => <CellMemo cell={cell} key={index}/>)}
+            {props.row.map( (cell, index) => <Cell cell={cell} key={index}/>)}
         </span>
     );
-}
+});
 
-function Cell(props) {
+const Cell = memo( props => {
     const count = useRef(0);
 
     count.current++;
@@ -45,10 +45,6 @@ function Cell(props) {
     return (
         <span className={`t-cell t-cell-${value}`}></span>
     );
-}
-
-const CellMemo = memo(Cell);
-
-const RowMemo = memo(Row);
+});
 
 export const BoardMemo = memo(Board);

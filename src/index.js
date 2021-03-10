@@ -6,6 +6,8 @@ import {AgDashboard} from "./agGrid/agDashboard";
 import {RtDashboard} from "./reactTable/rtDashboard";
 import {RtOlympicWinners} from "./reactTable/rtOlympicWinners";
 import {FunImperativeHandle} from "./funImperativeHandle";
+import {DeDashboard} from "./devExpress/deDashboard";
+import {ReduxFun} from "./redux/reduxFun";
 
 function Game() {
 
@@ -57,12 +59,14 @@ function Game() {
 
     return (
         <div className="t-parent">
-            <BoardMemo addRowData={addRowData}/>
+            {/*<BoardMemo addRowData={addRowData}/>*/}
             {/*<AgDashboard rowData={rowData}/>*/}
             {/*<RtDashboard rowData={rowData}/>*/}
+            {/*<DeDashboard rowData={rowData}/>*/}
             {/*<RtOlympicWinners/>*/}
             {/*<ContextFun/>*/}
             {/*<FunImperativeHandle/>*/}
+            <ReduxFun/>
         </div>
     );
 }
