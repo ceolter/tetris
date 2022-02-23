@@ -1,17 +1,12 @@
 import React, { memo, useEffect, useRef } from 'react';
 import {useBoard} from "./useBoard";
 
-export function Board (props) {
+const Board = () => {
 
     const [display, score, onKeyDown] = useBoard();
     const eBoard = useRef();
 
     useEffect(focusBoard, []);
-    useEffect(passRowData, [display]);
-
-    function passRowData() {
-        props.addRowData(display);
-    }
 
     function focusBoard() {
         eBoard.current.focus();
@@ -26,7 +21,7 @@ export function Board (props) {
             {display.map( (row, index) => <Row row={row} key={index}/>)}
         </div>
     );
-}
+};
 
 const Row = memo( props => {
     return (
@@ -47,4 +42,4 @@ const Cell = memo( props => {
     );
 });
 
-export const BoardMemo = memo(Board);
+export default memo(Board);

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import {useInterval} from "./useInterval";
 import {randomShape} from "./shapeFactory";
 

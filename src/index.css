@@ -4,8 +4,7 @@ body {
 }
 
 .t-row {
-    display: block;
-    margin-bottom: -3px;
+    display: flex;
 }
 
 .t-board {
@@ -53,34 +52,6 @@ body {
 
 .t-parent {
     display: flex;
-}
-
-.t-dashboard {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid grey;
-}
-
-.t-ag-grid {
-    height: 100%;
-    width: 500px;
-}
-
-.t-de-grid {
-    height: 100%;
-    width: 500px;
-}
-
-.t-react-grid {
-    height: 100%;
-    width: 500px;
-    display: inline-block;
-    overflow-y: scroll;
-}
-
-.t-react-grid-body {
-    height: 200px;
-    overflow-x: scroll;
 }
 
 element.style {
