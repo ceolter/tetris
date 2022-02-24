@@ -1,6 +1,7 @@
 {
   "name": "tetris",
   "version": "0.1.0",
+  "homepage": "./",
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
