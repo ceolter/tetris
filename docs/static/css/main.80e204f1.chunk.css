@@ -1,0 +1,2 @@
+body{font:14px "Century Gothic",Futura,sans-serif;margin:0}.t-row{display:flex}.t-board{margin:20px;padding:20px;border:1px solid grey}.t-board,.t-cell{display:inline-block}.t-cell{width:30px;height:30px;box-sizing:border-box;color:grey}.t-cell-0{background-color:#000}.t-cell-1{background-color:#00d;border-color:#00b #00f #00f #00b;border-style:solid;border-width:1px}.t-cell-2{background-color:green}.t-cell-3{background-color:red}.t-score-label{font-weight:700}.t-parent{display:flex}element.style{width:44px;left:0}
+/*# sourceMappingURL=main.80e204f1.chunk.css.map */
