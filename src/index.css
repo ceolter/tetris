@@ -42,8 +42,9 @@ body {
     background-color: red;
 }
 
-.t-score-label {
-    font-weight: bold;
+.t-board-messages {
+    display: flex;
+    justify-content: space-between;
 }
 
 .t-score-label {

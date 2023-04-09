@@ -42,7 +42,8 @@ export function useBoard() {
     const [shape, setShape] = useState(()=> randomShape() );
     const [position, setPosition] = useState({x: 0, y: 0});
     const [display, setDisplay] = useState( ()=> mergeIntoStage(scene, shape, position) );
-    const [score, setScore] = useState( 0);
+    const [score, setScore] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
 
     useEffect(updateDisplay, [scene, shape, position]);
     useEffect(removeFullLines, [scene]);
@@ -54,9 +55,15 @@ export function useBoard() {
     }
 
     function tick() {
-        if (!movePosition(0, 1)) {
-            placeShape();
+        if(!isPaused) {
+            if (!movePosition(0, 1)) {
+                placeShape();
+            }
         }
+    }
+
+    function togglePause() {
+        setIsPaused(!isPaused);
     }
 
     function placeShape() {
@@ -105,7 +112,7 @@ export function useBoard() {
 
         const removeRow = (rY) => {
             for (let y = rY; y > 0; y--) {
-                for (let x = 0; x < COLUMN_COUNT - 1; x++) {
+                for (let x = 0; x <= COLUMN_COUNT - 1; x++) {
                     newScene[y][x] = newScene[y-1][x];
                 }
             }
@@ -155,7 +162,7 @@ export function useBoard() {
                 event.preventDefault();
                 break;
             case ' ':
-                rotateShape();
+                togglePause()
                 event.preventDefault();
                 break;
             default:
@@ -188,5 +195,5 @@ export function useBoard() {
         });
     }
 
-    return [display, score, onKeyDown];
+    return [display, score, onKeyDown, isPaused];
 }
