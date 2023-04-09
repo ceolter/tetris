@@ -154,6 +154,10 @@ export function useBoard() {
                 rotateShape();
                 event.preventDefault();
                 break;
+            case ' ':
+                rotateShape();
+                event.preventDefault();
+                break;
             default:
                 break;
         }
