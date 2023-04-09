@@ -101,7 +101,7 @@ export function useBoard() {
         };
 
         if (validPosition(position, newShape)) {
-            setShape(newShape);
+            !isPaused && setShape(newShape);
         }
     }
 
@@ -112,7 +112,7 @@ export function useBoard() {
 
         const removeRow = (rY) => {
             for (let y = rY; y > 0; y--) {
-                for (let x = 0; x <= COLUMN_COUNT - 1; x++) {
+                for (let x = 0; x < COLUMN_COUNT; x++) {
                     newScene[y][x] = newScene[y-1][x];
                 }
             }
@@ -127,7 +127,7 @@ export function useBoard() {
 
         for (let y = 0; y < ROW_COUNT; y++) {
             let rowHasEmptySpace = false;
-            for (let x = 0; x < COLUMN_COUNT - 1; x++) {
+            for (let x = 0; x < COLUMN_COUNT; x++) {
                 if (newScene[y][x]===0) {
                     rowHasEmptySpace = true;
                     break;
@@ -175,7 +175,7 @@ export function useBoard() {
 
         if (!validPosition(res, shape)) { return false;}
 
-        setPosition(res);
+        !isPaused && setPosition(res);
 
         return true;
     }
