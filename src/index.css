@@ -47,12 +47,20 @@ body {
     justify-content: space-between;
 }
 
+.t-instructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .t-score-label {
     font-weight: bold;
 }
 
 .t-parent {
     display: flex;
+    justify-content: center;
 }
 
 element.style {
