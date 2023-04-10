@@ -28,14 +28,6 @@ function updateStage(stage, x, y, value) {
     const res = stage.slice();
     res[y] = stage[y].slice();
     res[y][x] = value;
-    // let lost = false;
-    // console.log('res[0][0]', res[0][0])
-    // console.log('stage[0][0]', stage[0][0])
-    // for(let shapes in stage[0]) {
-    //     console.log('shapes', shapes)
-    // }
-    // console.log('stage[0]', stage[0])
-    // console.log('value', value)
     return res;
 }
 
@@ -55,9 +47,6 @@ export function useBoard() {
     useEffect(updateDisplay, [scene, shape, position]);
     useEffect(removeFullLines, [scene]);
     useInterval(tick, 600);
-    useEffect(() => {
-        console.log(validPosition(position, shape))
-    }, [validPosition])
 
     function updateDisplay() {
         const newDisplay = mergeIntoStage(scene, shape, position);
@@ -115,7 +104,6 @@ export function useBoard() {
         };
 
         if (validPosition(position, newShape)) {
-            console.log('new shape')
             !isPaused && setShape(newShape);
         }
     }
