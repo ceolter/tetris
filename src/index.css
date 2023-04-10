@@ -42,8 +42,16 @@ body {
     background-color: red;
 }
 
-.t-score-label {
-    font-weight: bold;
+.t-board-messages {
+    display: flex;
+    justify-content: space-between;
+}
+
+.t-instructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .t-score-label {
@@ -52,6 +60,7 @@ body {
 
 .t-parent {
     display: flex;
+    justify-content: center;
 }
 
 element.style {

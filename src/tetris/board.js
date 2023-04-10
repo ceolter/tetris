@@ -1,9 +1,9 @@
 import React, { memo, useEffect, useRef } from 'react';
-import {useBoard} from "./useBoard";
+import { useBoard } from "./useBoard";
 
 const Board = () => {
 
-    const [display, score, onKeyDown] = useBoard();
+    const [display, score, onKeyDown, isPaused] = useBoard();
     const eBoard = useRef();
 
     useEffect(focusBoard, []);
@@ -13,25 +13,30 @@ const Board = () => {
     }
 
     return (
-        <div ref={eBoard} className={'t-board'} tabIndex={0} onKeyDown={ onKeyDown }>
-            <div>
-                <span className="t-score-label">Score:</span>
-                <span className="t-score-label">{score.toLocaleString()}</span>
+        <div ref={eBoard} className={'t-board'} tabIndex={0} onKeyDown={onKeyDown}>
+            <div className='t-board-messages'>
+                <div>
+                    <span className="t-score-label">Score:</span>
+                    <span className="t-score-label">{score.toLocaleString()}</span>
+                </div>
+                <div>
+                    <span className="t-paused-label">{isPaused && 'Game is Paused!'}</span>
+                </div>
             </div>
-            {display.map( (row, index) => <Row row={row} key={index}/>)}
+            {display.map((row, index) => <Row row={row} key={index} />)}
         </div>
     );
 };
 
-const Row = memo( props => {
+const Row = memo(props => {
     return (
         <span className='t-row'>
-            {props.row.map( (cell, index) => <Cell cell={cell} key={index}/>)}
+            {props.row.map((cell, index) => <Cell cell={cell} key={index} />)}
         </span>
     );
 });
 
-const Cell = memo( props => {
+const Cell = memo(props => {
     const count = useRef(0);
 
     count.current++;
